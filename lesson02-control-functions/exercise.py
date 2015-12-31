@@ -20,7 +20,9 @@ if another_number > 3:
 
     if a_fourth_number < 4:
 
-        print('Yeah!')some_number = 10
+        print('Yeah!')
+        
+some_number = 10
 another_number = 4
 
 # create an if statement that checks if some_number is greater than 4, then print "Yeah!" if True

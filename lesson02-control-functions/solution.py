@@ -13,7 +13,6 @@ print('hi')
 # block
 a_number = 3
 another_number = 4 * a_number
-some_number = 5
 if another_number > 3:
 
     a_third_number = 4
@@ -21,7 +20,9 @@ if another_number > 3:
 
     if a_fourth_number < 4:
 
-        print('Yeah!')some_number = 10
+        print('Yeah!')
+        
+some_number = 10
 another_number = 4
 
 # create an if statement that checks if some_number is greater than 4, then print "Yeah!" if True
@@ -89,7 +90,7 @@ i_need_numberz()
 def i_print_paramz(name):
     print(name)
 
-i_print_paramz(name)
+i_print_paramz('Boaz')
 
 
 # Define and call a function that takes two numbers as parameters then prints the sum of these numbers
@@ -103,7 +104,7 @@ i_take_ur_numberz(3,4)
 def u_get_tooz_namez(name):
     return name*2
     
-print(u_get_tooz_names('Joe')
+print(u_get_tooz_namez('Joe'))
 
 
 # Define and call a function that takes two numbers as parameters then returns the sum of these numbers
