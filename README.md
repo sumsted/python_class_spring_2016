@@ -3,19 +3,17 @@
 1. Setup and Basics
 2. More Basics
 3. Images
-4. Twitter Wordcloud
+4. Twitter
 5. Website
 6. Robot
 7. Chat
-8. Images
+8. Review
 9. Minecraft
 10. Sense Hat
-11. Review
-12. Test
-13. JavaScript
-14. Basics
-15. Website JS
-16. Robot JS
+11. HTML
+12. JavaScript
+13. Website Node
+
 
 Ideas 
 ISS
