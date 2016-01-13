@@ -1,1 +1,9 @@
-*.pyc
+# Created by https://www.gitignore.io
+__pycache__/
+*.py[cod]
+*$py.class
+*.iml
+.idea/
+*.ipr
+*.iws
+.idea_modules/
