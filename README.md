@@ -11,8 +11,7 @@
 9. Minecraft
 10. Sense Hat
 11. HTML
-12. JavaScriptls
-13. 
+12. JavaScript
 13. Website Node
 
 
