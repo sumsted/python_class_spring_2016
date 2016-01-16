@@ -1,13 +1,13 @@
 Classes and Objects
--------------------
-
 
 Everything is an object
-------------------------
+
 name some objects...
 
 name some Python objects...
 the type() function
+
+
 >>> type(1)
 <class 'int'>
 >>> type('hi')
@@ -17,29 +17,34 @@ the type() function
 >>> type([1,2,3])
 <class 'list'>
 
-Why use classes?
-----------------
-Use to describe a thing.
 
-You can also use classes to group like functions together, but in Python it may be better to just use a module for that.
+Why use classes?
+
+Use to describe a thing and how that thing behaves.
+
+You can also use classes to group like functions together, but in Python it is better to just use a module for that.
+In fact, with python always try to use modules instead of classes.
 
 Objects have properties
------------------------
+
 Properties are things that describe an object.
+
 
 Fruit
     color
     shape
     age
 
+
 Objects can do things
----------------------
+
 Fruit
     ripen()
 
 
 A class is a blueprint for an object
-------------------------------------
+
+
 class Fruit:
     ripe_age = 5
 
@@ -65,10 +70,12 @@ class Fruit:
             print('A',self.name,' does not make a very good weapon.'
             print('Troll strikes a deadly counter blow.')
 
+
 Instances vs. classes
----------------------
+
 An instance is an object created from a class (or blue print).
 You may access functions or attributes on an object instance.
+
 
 >>> grape = Fruit('Fred the grape')
 >>> grape.color
@@ -95,7 +102,8 @@ True
 
 
 More on instances
------------------
+
+
 orange = Fruit('orange')
 orange.color = 'orange'
 orange.attack()
@@ -108,7 +116,3 @@ apple.attack()
 'apple does not make a very good weapon.'
 'Troll strikes a deadly counter blow.'
 
-coconut = Fruit('coconut')
-coconut.color = 'brown'
-carrot.attack()
-'Troll is confused, stumbles and cannot fight back.'

@@ -218,7 +218,7 @@ You may define functions with multiple parameters.
 
  
     >>> def power(num, pow):
-    ...     print(num**pow)
+    ...     print(num**po)
     ...
     >>> power(2, 3)
     8Return results
@@ -249,3 +249,161 @@ In Python functions may return multiple values.
     >>> print(g, t)
     Hello John 20
  
+ 
+ 
+Dictionary
+
+A Python dictionary is data structure that lets the programmer map a key to a value.
+Just like with a real dictionary, you define a set of terms. Each term has a single definition.
+Terms or keys may be any data type, such as a string, int, or number. Definitions or values may be any type or object.
+
+For example, take the following defined terms.
+
+    cow - four legged bovine, vegan, sometimes spotted
+    cat - four legged feline, omnivore, usually furry, meows alot
+    bird - winged creature, noisy, tweets constantly
+
+A Python dictionary version of these terms will look something like this.
+
+    animals = {
+        'cow': 'four legged bovine, vegan, sometimes spotted',
+        'cat': 'four legged feline, omnivore, usually furry, meows alot',
+        'bird': 'winged creature, noisy, tweets constantly'
+    }
+
+    >>> print(animals)
+    {'cat': 'four legged feline, omnivore, usually furry, meows alot', 'cow': 'four legged bovine, vegan, sometimes spotted', 'bird': 'winged creature, noisy, tweets constantly'}
+
+To find the definition or value of a particular term or key, you may reference the key using the square brackets.
+This looks similar to the way we referenced items in a list or letters in a string. To find the value of 'cow' we
+reference 'cow' in animals.
+
+    >>> animals['cow']
+
+    four legged bovine, vegan, sometimes spotted
+
+If we pass in a key that doesn't exist in a dictionary we see a KeyError.
+
+    >>> animals['dog']
+
+    Traceback (most recent call last):
+      File "/Applications/PyCharm Edu.app/Contents/helpers/pydev/pydevd.py", line 2351, in <module>
+        globals = debugger.run(setup['file'], None, None, is_module)
+      File "/Applications/PyCharm Edu.app/Contents/helpers/pydev/pydevd.py", line 1771, in run
+        pydev_imports.execfile(file, globals, locals)  # execute the script
+      File "/Applications/PyCharm Edu.app/Contents/helpers/pydev/_pydev_imps/_pydev_execfile.py", line 18, in execfile
+        exec(compile(contents+"\n", file, 'exec'), glob, loc)
+      File "/Users/scottumsted/Library/Preferences/PyCharmEdu20/scratches/scratch_4", line 11, in <module>
+        print(animals['dog'])
+    KeyError: 'dog'
+
+We can create dictionaries as we did above with animals. We might also want to create an empty dictionary and add
+values to it throughout our program.
+
+    >>> animals = {}
+
+    >>> animals['dog'] = 'not a cat, a cow, or a bird, barks a lot'
+
+    >>> animals['dog']
+
+    'not a cat, a cow, or a bird, barks a lot'
+
+
+
+Using an if statement and a comparison we can check to see if a key exists in a dictionary.
+
+    animals = {}
+
+    animals['dog'] = 'not a cat, a cow, or a bird, barks a lot'
+
+    if 'cat' in animals:
+        print('cat -', animals['cat'])
+    else:
+        print('no cat for us')
+
+    if 'dog' in animals:
+        print('dog -', animals['dog'])
+    else:
+        print('no dog for us')
+
+    no cat for us
+    dog - not a cat, a cow, or a bird, barks a lot
+
+
+Finally, we can iterate or loop through dictionaries. Unlike lists, dictionaries are not sorted in any particular order.
+They are mainly intended to be used with keys.
+
+    animals = {
+        'cow': 'four legged bovine, vegan, sometimes spotted',
+        'cat': 'four legged feline, omnivore, usually furry, meows alot',
+        'bird': 'winged creature, noisy, tweets constantly'
+    }
+
+    for k, v in animals.items():
+        print(k,' - ',v)
+        if k == 'cat':
+            print('meow')
+
+    cat  -  four legged feline, omnivore, usually furry, meows alot
+    meow
+    bird  -  winged creature, noisy, tweets constantly
+    cow  -  four legged bovine, vegan, sometimes spotted
+
+If you do need to sort a dictionary you may use the sorted() function.
+
+    for k, v in sorted(animals.items()):
+        print(k,' - ',v)
+        if k == 'cat':
+            print('meow')
+
+    bird  -  winged creature, noisy, tweets constantly
+    cat  -  four legged feline, omnivore, usually furry, meows alot
+    meow
+    cow  -  four legged bovine, vegan, sometimes spotted
+    
+Modules and Packages
+
+A Python module is file that contains Python code. Modules help you group togather variables,
+functions and classes that are related. For example you might have a module called animals that
+contains a list of animals. This module might also contain functions that let you do animal related
+things.
+
+The import statement is used to add the code from one module to another.
+
+You could have a module called animals.py that looks like this.
+
+    animals_dict = {
+        'cow': 'four legged bovine, vegan, sometimes spotted',
+        'cat': 'four legged feline, omnivore, usually furry, meows alot',
+        'bird': 'winged creature, noisy, tweets constantly'
+    }
+
+    def sorted_animals():
+        return sorted(animals)
+
+Then in my_code.py you could import specific objects from the animals.py module.
+
+    from animals import animals_dict
+
+    first = animals_dict['cat']
+    print('cat -', first)
+
+You could import all of the objects in animals by using a *.
+
+    from animals import *
+
+    first = animals_dict['cat']
+    print('cat -', first)
+
+    print(sorted_animals())
+
+You can also import all objects using import by itself. In this case you must specify
+the name of the module when using the items in the module.
+
+    import animals
+
+    first = animals.animals_dict['cat']
+    print('cat -', first)
+
+    print(animals.sorted_animals())
+    
