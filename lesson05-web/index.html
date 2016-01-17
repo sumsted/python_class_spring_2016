@@ -30,15 +30,13 @@
         <!-- Forms have an action that is used by the server to determine which function to run. -->
         <!-- They have a method that tells the server how the data will be sent. -->
         <!-- And forms will have a number of fields, such as input, that collect the data to be send to the server. -->
-        <form class="pure-form" action="/calculate" method="post">
+        <form class="pure-form" action="/tweet" method="post">
             <fieldset>
-                <legend>Multiply a couple of numbers</legend>
+                <legend>Send a tweet</legend>
 
-                <input name="first-number" type="number" placeholder="Numberm 1">
-                <input name="second-number" type="number" placeholder="Number 2">
-                <input name="third-number" type="number" placeholder="Number 3">
+                <input name="tweet-status" placeholder="Tweet Status">
 
-                <button type="submit" class="pure-button pure-button-primary">Calculate</button>
+                <button type="submit" class="pure-button pure-button-primary">Tweet</button>
             </fieldset>
         </form>
         <!-- ************   this is the end of the form ************ -->
@@ -46,9 +44,11 @@
 
 
         <!-- ************   our results are displayed here,
-                            notice {{result}}, this is a template field
+                            notice tweet, this is a template field
                             where our results are displayed ************ -->
-        <p class="splash-subhead">{{result}}</p>
+        % for tweet in tweets:
+        <p class="splash-subhead">{{tweet}}</p>
+        % end
         <!-- ************ end of results *************-->
 
 
