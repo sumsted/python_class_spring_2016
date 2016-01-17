@@ -3,8 +3,8 @@
 1. Setup and Basics x
 2. More Basics x
 3. Images x
-4. Twitter
-5. Website
+4. Twitter x
+5. Website x
 6. Robot x
 7. Chat
 8. Review x

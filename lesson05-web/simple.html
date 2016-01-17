@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+        <title>My Page</title>
+    </head>
+    <body>
+        
+        <form action="/tweet" method="post">
+            Enter a tweet: 
+            <input name="tweet-status">
+            <button type="submit" class="pure-button pure-button-primary">Tweet</button>
+        </form>
+
+        % for tweet in tweets:
+            <p>{{tweet}}</p>
+        % end
+        
+    </body>
+</html>
