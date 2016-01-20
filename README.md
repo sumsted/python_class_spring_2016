@@ -1,6 +1,5 @@
 
-0. setup and python intro needs readm
-1. Setup and Basics x
+1. Basics x
 2. More Basics x
 3. Images x
 4. Twitter x needs readme
@@ -10,14 +9,12 @@
 8. Review x
 9. Minecraft x
 10. Sense Hat
-11. More HTML
-12. Site development
-13. Site development
 
 
 Setup
+Install
 Python 3.5
-Pycharm
+PyCharm EDU2
 bottle
 pygame
 requests

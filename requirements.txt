@@ -1,0 +1,7 @@
+Pillow==3.0.0
+bottle==0.12.9
+oauthlib==1.0.3
+requests==2.9.1
+requests-oauthlib==0.6.0
+six==1.10.0
+tweepy==3.5.0
