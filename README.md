@@ -1,22 +1,12 @@
+Lessons
 
-1. Basics x
-2. More Basics x
-3. Images x
-4. Twitter x needs readme
-5. Website x needs readme
-6. Robot x
-7. Chat x needs readme
-8. Review x
-9. Minecraft x
+1. Basics - data types, operators, print and input
+2. More Basics - comments, blocks, loops, functions, dictionaries, modules
+3. Images - file io
+4. Twitter - modules, api
+5. Website - HTML, web, bottle
+6. Robot - gopigo
+7. Chat - needs readme
+8. Review 
+9. Minecraft 
 10. Sense Hat
-
-
-Setup
-Install
-Python 3.5
-PyCharm EDU2
-bottle
-pygame
-requests
-requirements.txt
-
