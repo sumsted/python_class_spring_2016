@@ -62,8 +62,10 @@ Consider this code.
     print("I'm out of a code block")
  
 
-There is a code block after the if statement.if Statement
+There is a code block after the if statement.
 
+if Statement
+============
 Use the if statement and a comparison to decide what code blocks should run.
 
  
@@ -87,8 +89,8 @@ To check if some_number is above a certain value you could do something like thi
  
     some_number = 3
     if some_number > 4:
-        print('some_number is greater than 4')
 
+        print('some_number is greater than 4')
     if some_number <= 4:
         print('some_number is less than or equal to 4')
  
@@ -109,9 +111,9 @@ The elif else if statement will let you chain together comparisons. Again this m
     some_number = 3
     if some_number > 4:
         print('some_number is greater than 4')
-    if 2 > some_number <= 4:
+    elif 2 > some_number <= 4:
         print('some_number is greater than 2 and less than or equal to 4')
-    if some_number > 0:
+    elif some_number > 0:
         print('some_number is greater than 0')
     else:
         print('some_number is less than or equal to 0')

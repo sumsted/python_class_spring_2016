@@ -34,7 +34,7 @@ class Robot:
 
 if __name__ == '__main__':
 
-    my_robot = Robot('MattBot', True)
+    my_robot = Robot('MattBot', False)
 
 
     for i in range(5):
