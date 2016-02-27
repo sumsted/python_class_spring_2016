@@ -9,8 +9,8 @@ robot_speed = 100
 def pause(t=0.5):
     if t > 5.0:
         duration = 5.0
-    elif t < .5:
-        duration = .5
+    elif t < .2:
+        duration = .2
     else:
         duration = t
     print('sleep = ', duration)
@@ -21,6 +21,7 @@ def forward(duration=0.5):
     print('robot_controller, forward, robot_debug =', robot_debug)
     if not robot_debug:
         gopigo_client.set_speed(robot_speed)
+        gopigo_client.set_left_speed(robot_speed+5)
         gopigo_client.stop()
         gopigo_client.fwd()
         pause(duration)
