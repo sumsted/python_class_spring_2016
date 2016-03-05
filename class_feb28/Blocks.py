@@ -4,7 +4,7 @@ from random import shuffle
 
 
 SPACING = 10
-VCELLS = 10
+VCELLS = 9
 MARGIN = 20
 
 hcells = 0

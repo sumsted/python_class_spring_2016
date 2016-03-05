@@ -1,10 +1,10 @@
 import Blocks
 
 # define a variable that contains the name of your image file
-input_image_file = 'fireworks.jpg'
+input_image_file = 'heartsun.jpg'
 
 #define a variable that contains the name of output file
-output_image_file = 'fireworks_out.jpg'
+output_image_file = 'hearsun_out.jpg'
 
 # open your input file for binary read with the 'with' statement
 with open(input_image_file, 'rb') as infile:
