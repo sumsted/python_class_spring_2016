@@ -1,5 +1,5 @@
-#import dragonbot as robot
-import gopibot as robot
+import dragonbot as robot
+#import gopibot as robot
 
 robot.robot_debug = False
 
