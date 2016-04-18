@@ -134,7 +134,8 @@ def attack(player, item_name):
     player_room = school_map[player.location[0]][player.location[1]]
 
     for index, item in enumerate(player.items):
-        if item_name == item['name'] and school_map[player.location[0]][player.location[1]].monster['health'] > 0:
+        if item_name == item['name'] and (school_map[player.location[0]][player.location[1]].monster['health'] > 0 or
+                                          item['attack'] < 0):
             print("\n%s shall feel the wrath of your %s.\n" % (
                 player_room.monster['name'], item['name']))
             if item['attack'] < 5:
@@ -147,6 +148,7 @@ def attack(player, item_name):
             player_room.monster['health'] -= item['attack']
 
             # HERE is where you would increase the player points with the item attack points
+            player.points += item['attack']
 
             if player_room.monster['health'] > 0:
                 print("\n%s's health is now %d." % (player_room.monster['name'],
@@ -272,13 +274,25 @@ def eat(player, item_name):
     """eat an item to add to player's health
     Some items may deduct health.
     """
-    print('i don\'t know how to eat yet')
     # look at each item in player.items
     # by iterating through all items in player.items
     # then use an if statement to check for item_name == item['name']
     # if found then add item['health'] to player.health and
     # print some clever message and finally
     # break to end call
+
+    for index, item in enumerate(player.items):
+        if item_name == item['name']:
+            player.health += item['health']
+            del player.items[index]
+            if 0 < item['health'] < 5:
+                print('A %s does not taste good.\n'%item['name'])
+            elif item['health']<=0:
+                print('A %s hurts you.\n'%item['name'])
+            else:
+                print('A %s helps.\n'%item['name'])
+            health(player)
+            break
 
 
 def health(player):

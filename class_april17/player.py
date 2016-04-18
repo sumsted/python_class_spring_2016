@@ -24,12 +24,12 @@ class Player():
         self.location = self.STARTING_LOCATION
         self.health = self.STARTING_HEALTH
         self.items = [ITEMS[STARTING_ITEM]]
-
+        self.points = 0
         # you may create a self.points variable and set it to zero
 
     def get_description(self):
         description = "\n\nI know what dude I am.  I'm %s!\n" % self.name
-        description += "\nMy health is %d and I'm carrying ....let me see... I'm carrying...\n" % self.health
+        description += "\nMy health is %d. I have %d points. and I'm carrying ....let me see... I'm carrying...\n" % (self.health, self.points)
         for index, item in enumerate(self.items):
             if index > 0:
                 description += "\n      and a %s" % item['name']
